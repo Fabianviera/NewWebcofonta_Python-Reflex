@@ -28,13 +28,13 @@ def legal_shell(eyebrow_text: str, title: str, italic: str, updated: str, *secti
                 rx.text.span(italic, font_family=FONT_SERIF, font_style="italic", color=WATER)
                 if italic else rx.fragment(),
                 font_family=FONT_HEADING,
-                font_size=["2rem", "3rem", "4rem"],
+                font_size="4rem",
                 letter_spacing="0.05em", color=WHITE, line_height="1",
                 as_="h1",
             ),
             rx.text(updated, font_family=FONT_BODY, font_size="0.78rem",
                     color=MUTED, font_weight="300", margin_top="1rem"),
-            padding=["9rem 1.5rem 3rem", "9rem 1.5rem 3rem", "10rem 3rem 4rem"],
+            padding="10rem 3rem 4rem",
             background=f"linear-gradient(160deg, {NAVY} 0%, #0d2040 100%)",
             border_bottom="1px solid rgba(59,130,196,0.1)",
             width="100%",
@@ -44,7 +44,7 @@ def legal_shell(eyebrow_text: str, title: str, italic: str, updated: str, *secti
             *sections,
             max_width="860px",
             margin="0 auto",
-            padding=["3rem 1.5rem", "3rem 1.5rem", "5rem 3rem"],
+            padding="5rem 3rem",
         ),
         footer(),
         background=NAVY, font_family=FONT_BODY, color=TEXT,
@@ -206,7 +206,7 @@ def politica_privacidad() -> rx.Component:
                     )
                     for title, desc in derechos
                 ],
-                columns=["1", "2", "2"],
+                columns="2",
                 gap="1rem",
                 margin_bottom="1.5rem",
             ),
@@ -361,7 +361,7 @@ def politica_calidad() -> rx.Component:
                     )
                     for num, title, desc in principios
                 ],
-                columns=["1", "2", "2"],
+                columns="2",
                 gap="1.5rem",
             ),
         ),
@@ -373,7 +373,7 @@ def politica_calidad() -> rx.Component:
                         rx.text("✓", color=SKY, font_size="0.9rem", min_width="20px"),
                         rx.text(obj, font_family=FONT_BODY, font_weight="300",
                                 color=MUTED, font_size="0.9rem", line_height="1.6"),
-                        align="flex-start", gap="1rem",
+                        align="start", gap="1rem",
                         padding_y="1.1rem",
                         border_bottom="1px solid rgba(59,130,196,0.1)",
                         width="100%",

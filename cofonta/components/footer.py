@@ -44,7 +44,7 @@ def footer() -> rx.Component:
             gap="1rem",
             width="100%",
         ),
-        padding=["1.5rem", "1.5rem", "2rem 3rem"],
+        padding="2rem 3rem",
         background=NAVY,
         border_top="1px solid rgba(59,130,196,0.1)",
         width="100%",

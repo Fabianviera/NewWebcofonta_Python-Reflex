@@ -62,7 +62,7 @@ def navbar() -> rx.Component:
                 nav_link("Tienda", "/#tienda"),
                 nav_link("Contacto", "/#contacto"),
                 gap="2.5rem",
-                display=["none", "none", "flex"],
+                display="flex",
             ),
             rx.link(
                 "Solicitar presupuesto",
@@ -88,7 +88,7 @@ def navbar() -> rx.Component:
         left="0",
         right="0",
         z_index="100",
-        padding=["1rem 1.5rem", "1rem 1.5rem", "1.2rem 3rem"],
+        padding="1.2rem 3rem",
         background="rgba(10,22,40,0.9)",
         backdrop_filter="blur(12px)",
         border_bottom="1px solid rgba(59,130,196,0.15)",

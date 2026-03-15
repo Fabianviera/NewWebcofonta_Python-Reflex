@@ -47,7 +47,7 @@ def section_title(normal: str, italic: str = "") -> rx.Component:
         rx.text.span(italic, font_family=FONT_SERIF, font_style="italic", color=WATER)
         if italic else rx.fragment(),
         font_family=FONT_HEADING,
-        font_size=["2.2rem", "3rem", "4rem"],
+        font_size="4rem",
         letter_spacing="0.05em",
         color=WHITE,
         line_height="1",
@@ -64,7 +64,7 @@ def stat_block(num: str, suffix: str, label: str) -> rx.Component:
         ),
         rx.text(label, font_family=FONT_BODY, font_size="0.7rem",
                 letter_spacing="0.18em", text_transform="uppercase", color=MUTED),
-        align="flex-end", gap="0.2rem",
+        align="end", gap="0.2rem",
     )
 
 
@@ -106,7 +106,7 @@ def contact_detail(icon: str, content: rx.Component) -> rx.Component:
     return rx.hstack(
         rx.image(src=icon, width="16px", height="16px", flex_shrink="0", margin_top="2px"),
         content,
-        align="flex-start", gap="0.9rem", margin_bottom="0.8rem",
+        align="start", gap="0.9rem", margin_bottom="0.8rem",
     )
 
 
@@ -143,12 +143,12 @@ def hero_section() -> rx.Component:
             eyebrow("Tenerife · Islas Canarias · Desde 1986"),
             rx.heading(
                 "Expertos en",
-                rx.br(),
+                rx.el.br(),
                 rx.text.span("fontanería", font_family=FONT_SERIF, font_style="italic", color=WATER),
-                rx.br(),
+                rx.el.br(),
                 "& instalaciones",
                 font_family=FONT_HEADING,
-                font_size=["3.5rem", "5rem", "7rem"],
+                font_size="7rem",
                 line_height="0.95",
                 letter_spacing="0.04em",
                 color=WHITE,
@@ -175,7 +175,7 @@ def hero_section() -> rx.Component:
             stat_block("15K", "+", "Viviendas construidas"),
             stat_block("30", "+",  "Instalaciones en Canarias"),
             position="absolute", right="3rem", bottom="6rem",
-            display=["none", "none", "flex"],
+            display="flex",
             flex_direction="column", gap="2.5rem", align_items="flex-end",
         ),
         id="inicio",
@@ -183,7 +183,7 @@ def hero_section() -> rx.Component:
         display="flex",
         flex_direction="column",
         justify_content="flex-end",
-        padding=["0 1.5rem 4rem", "0 1.5rem 4rem", "0 3rem 6rem"],
+        padding="0 3rem 6rem",
         position="relative",
         overflow="hidden",
     )
@@ -232,12 +232,12 @@ def services_section() -> rx.Component:
                 )
                 for icon, title, desc in services
             ],
-            columns=["1", "2", "3"],
+            columns="3",
             gap="1px",
             background="rgba(59,130,196,0.1)",
         ),
         id="servicios",
-        padding=["5rem 1.5rem", "5rem 1.5rem", "7rem 3rem"],
+        padding="7rem 3rem",
         background=STEEL,
         width="100%",
     )
@@ -284,7 +284,7 @@ def empresa_section() -> rx.Component:
                                     color="rgba(59,130,196,0.3)", line_height="1", min_width="36px"),
                             rx.text(txt, font_family=FONT_BODY, font_weight="300",
                                     color=MUTED, font_size="0.9rem", line_height="1.6"),
-                            align="flex-start", gap="1rem",
+                            align="start", gap="1rem",
                             padding_y="1rem",
                             border_bottom="1px solid rgba(59,130,196,0.1)",
                             width="100%",
@@ -337,13 +337,13 @@ def empresa_section() -> rx.Component:
                 ),
                 align="stretch", gap="0",
             ),
-            direction=["column", "column", "row"],
+            direction="row",
             gap="5rem",
-            align="flex-start",
+            align="start",
             width="100%",
         ),
         id="empresa",
-        padding=["5rem 1.5rem", "5rem 1.5rem", "7rem 3rem"],
+        padding="7rem 3rem",
         background=NAVY,
         width="100%",
     )
@@ -380,7 +380,7 @@ def obras_section() -> rx.Component:
         ),
         rx.grid(
             *[obra_card(img, t, s) for img, t, s in obras],
-            columns=["1", "2", "3"],
+            columns="3",
             gap="1.5rem",
             margin_bottom="3rem",
         ),
@@ -399,7 +399,7 @@ def obras_section() -> rx.Component:
                 )
                 for o in otras
             ],
-            columns=["1", "1", "2"],
+            columns="2",
             gap="0",
             margin_bottom="2.5rem",
         ),
@@ -409,7 +409,7 @@ def obras_section() -> rx.Component:
             **btn_ghost,
         ),
         id="obras",
-        padding=["5rem 1.5rem", "5rem 1.5rem", "7rem 3rem"],
+        padding="7rem 3rem",
         background=f"linear-gradient(180deg, {STEEL} 0%, {NAVY} 100%)",
         width="100%",
     )
@@ -421,7 +421,7 @@ def tienda_section() -> rx.Component:
             rx.text(icon_char, font_size="0.9rem", color=SKY, min_width="18px"),
             rx.text(content, font_family=FONT_BODY, font_weight="300",
                     color=MUTED, font_size="0.88rem", line_height="1.6"),
-            align="flex-start", gap="0.8rem", margin_bottom="0.5rem",
+            align="start", gap="0.8rem", margin_bottom="0.5rem",
         )
 
     return rx.box(
@@ -477,13 +477,13 @@ def tienda_section() -> rx.Component:
                 ),
                 align="stretch", gap="0", width="100%",
             ),
-            direction=["column", "column", "row"],
+            direction="row",
             gap="5rem",
-            align=["stretch", "stretch", "center"],
+            align="center",
             width="100%",
         ),
         id="tienda",
-        padding=["5rem 1.5rem", "5rem 1.5rem", "7rem 3rem"],
+        padding="7rem 3rem",
         background=NAVY,
         width="100%",
     )
@@ -499,20 +499,20 @@ def contacto_section() -> rx.Component:
                 rx.text("📍", font_size="0.85rem", color=SKY, min_width="18px"),
                 rx.text(addr, font_family=FONT_BODY, font_weight="300",
                         color=MUTED, font_size="0.88rem", line_height="1.6"),
-                align="flex-start", gap="0.8rem", margin_bottom="0.7rem",
+                align="start", gap="0.8rem", margin_bottom="0.7rem",
             ),
             rx.hstack(
                 rx.text("📞", font_size="0.85rem", color=SKY, min_width="18px"),
                 rx.text(tel, font_family=FONT_BODY, font_weight="300",
                         color=MUTED, font_size="0.88rem"),
-                align="flex-start", gap="0.8rem", margin_bottom="0.7rem",
+                align="start", gap="0.8rem", margin_bottom="0.7rem",
             ),
             rx.hstack(
                 rx.text("✉️", font_size="0.85rem", color=SKY, min_width="18px"),
                 rx.link(email, href=f"mailto:{email}", font_family=FONT_BODY,
                         font_weight="300", color=MUTED, font_size="0.88rem",
                         text_decoration="none", _hover={"color": WATER}),
-                align="flex-start", gap="0.8rem", margin_bottom="0.5rem",
+                align="start", gap="0.8rem", margin_bottom="0.5rem",
             ),
             rx.link("Ver en el mapa →", href=map_href,
                     font_family=FONT_BODY, font_size="0.75rem",
@@ -618,13 +618,13 @@ def contacto_section() -> rx.Component:
                 ),
                 align="stretch", gap="1.2rem", width="100%",
             ),
-            direction=["column", "column", "row"],
+            direction="row",
             gap="5rem",
-            align="flex-start",
+            align="start",
             width="100%",
         ),
         id="contacto",
-        padding=["5rem 1.5rem", "5rem 1.5rem", "7rem 3rem"],
+        padding="7rem 3rem",
         background=STEEL,
         width="100%",
     )
