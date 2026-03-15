@@ -22,7 +22,7 @@ def footer() -> rx.Component:
             ),
             # Copyright + crédito
             rx.text(
-                "© 2025 COFONTA, S.L. — Las Higueras, 8 local 4, 38350 Tacoronte, Tenerife (España)  ·  Diseñado por Fabián Viera",
+                "© 2026 COFONTA, S.L. — Las Higueras, 8 local 4, 38350 Tacoronte, Tenerife (España)  ·  Diseñado por Fabián Viera",
                 font_family=FONT_BODY,
                 font_size="0.75rem",
                 color=MUTED,

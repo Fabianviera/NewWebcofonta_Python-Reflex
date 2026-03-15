@@ -108,14 +108,14 @@ def info_box(*children) -> rx.Component:
 def aviso_legal() -> rx.Component:
     return legal_shell(
         "Información legal", "Aviso ", "Legal",
-        "Última actualización: enero de 2025 · En cumplimiento de la Ley 34/2002 (LSSI-CE)",
+        "Última actualización: marzo de 2026 · En cumplimiento de la Ley 34/2002 (LSSI-CE)",
 
         legal_section("1. Datos identificativos del titular",
             data_row("Razón social", "COFONTA, S.L."),
             data_row("NIF", "B-38795860"),
             data_row("Domicilio social", "Calle Las Higueras, n.º 8, Local 4, Edif. Alicia II — 38350 Tacoronte (Tenerife)"),
             data_row("Registro Mercantil", "Hoja TF-34.744, Folio 85, Tomo 2.654, Sección General, Inscripción 1.ª"),
-            data_row("Teléfono", "922 563 501 / 717 793 246"),
+            data_row("Teléfono", "922 563 501"),
             data_row("Email", "cofonta-oficina@cofonta.com"),
             data_row("Sitio web", "www.cofonta.com"),
         ),
@@ -175,7 +175,7 @@ def politica_privacidad() -> rx.Component:
     ]
     return legal_shell(
         "Protección de datos", "Política de ", "Privacidad",
-        "Última actualización: enero de 2025 · Conforme al RGPD (UE) 2016/679 y la LOPDGDD 3/2018",
+        "Última actualización: marzo de 2026 · Conforme al RGPD (UE) 2016/679 y la LOPDGDD 3/2018",
 
         legal_section("1. Responsable del tratamiento",
             data_row("Responsable", "COFONTA, S.L."),
@@ -334,7 +334,7 @@ def politica_calidad() -> rx.Component:
     ]
     return legal_shell(
         "Compromiso con la excelencia", "Política de ", "Calidad",
-        "Revisión: enero de 2025 · COFONTA, S.L. — NIF B-38795860",
+        "Revisión: marzo de 2026 · COFONTA, S.L. — NIF B-38795860",
 
         legal_section("Declaración de política de calidad",
             legal_p("COFONTA, S.L. considera que el compromiso con la calidad es un requisito "
@@ -423,7 +423,7 @@ def politica_calidad() -> rx.Component:
                         letter_spacing="0.08em", color=WHITE),
                 rx.text("Gerencia", font_family=FONT_BODY, font_weight="300",
                         color=MUTED, font_size="0.82rem", margin_top="0.3rem"),
-                rx.text("Tacoronte (Tenerife), enero de 2025",
+                rx.text("Tacoronte (Tenerife), marzo de 2026",
                         font_family=FONT_BODY, font_weight="300",
                         color=MUTED, font_size="0.8rem", margin_top="0.8rem"),
                 padding="2rem",

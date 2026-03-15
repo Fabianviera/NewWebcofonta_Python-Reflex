@@ -140,7 +140,7 @@ def hero_section() -> rx.Component:
         ),
         # Contenido
         rx.box(
-            eyebrow("Tenerife · Islas Canarias · Desde 2001"),
+            eyebrow("Tenerife · Islas Canarias · Desde 1986"),
             rx.heading(
                 "Expertos en",
                 rx.br(),
@@ -156,7 +156,7 @@ def hero_section() -> rx.Component:
                 as_="h1",
             ),
             rx.text(
-                "Más de 24 años especializados en fontanería, energía solar, climatización de piscinas "
+                "Más de 40 años especializados en fontanería, energía solar, climatización de piscinas "
                 "e instalaciones de gas en Canarias. Calidad, seguridad y garantía en cada obra.",
                 font_family=FONT_BODY, font_weight="300", color=MUTED,
                 font_size="1.05rem", line_height="1.7",
@@ -171,9 +171,9 @@ def hero_section() -> rx.Component:
         ),
         # Stats (desktop)
         rx.box(
-            stat_block("24", "+", "Años de experiencia"),
-            stat_block("10K", "+", "Viviendas construidas"),
-            stat_block("3", "",  "Instalaciones en Tenerife"),
+            stat_block("40", "+", "Años de experiencia"),
+            stat_block("15K", "+", "Viviendas construidas"),
+            stat_block("30", "+",  "Instalaciones en Canarias"),
             position="absolute", right="3rem", bottom="6rem",
             display=["none", "none", "flex"],
             flex_direction="column", gap="2.5rem", align_items="flex-end",
@@ -257,19 +257,19 @@ def empresa_section() -> rx.Component:
             rx.vstack(
                 rx.box(
                     eyebrow("La empresa"),
-                    section_title("Más de dos décadas ", "construyendo Canarias"),
+                    section_title("Más de cuatro décadas ", "construyendo Canarias"),
                     margin_bottom="2rem",
                 ),
                 rx.text(
                     "COFONTA es una empresa especializada en instalaciones de fontanería, saneamiento, "
-                    "energía solar e instalación de gas en las Islas Canarias. Con más de 24 años en el "
+                    "energía solar e instalación de gas en las Islas Canarias. Con más de 40 años en el "
                     "sector, nos hemos convertido en una de las principales empresas de instalaciones de "
                     "fontanería de ámbito regional.",
                     **{**{"font_family": FONT_BODY, "font_weight": "300", "color": MUTED,
                           "font_size": "0.92rem", "line_height": "1.85", "margin_bottom": "1rem"}},
                 ),
                 rx.text(
-                    "Nos avalan más de 10.000 viviendas construidas, complejos hoteleros, obras públicas "
+                    "Nos avalan más de 15.000 viviendas construidas, complejos hoteleros, obras públicas "
                     "y un gran número de reformas, siempre persiguiendo la calidad como prioridad absoluta.",
                     font_family=FONT_BODY, font_weight="300", color=MUTED,
                     font_size="0.92rem", line_height="1.85", margin_bottom="2rem",
@@ -333,7 +333,7 @@ def empresa_section() -> rx.Component:
                             letter_spacing="0.15em", text_transform="uppercase",
                             color=MUTED, padding="0.8rem 1.2rem"),
                     background=STEEL, border="1px solid rgba(59,130,196,0.15)",
-                    overflow="hidden", margin_left="3rem",
+                    overflow="hidden", margin_left="1.5rem",
                 ),
                 align="stretch", gap="0",
             ),
@@ -537,7 +537,7 @@ def contacto_section() -> rx.Component:
                 loc_card(
                     "Administración",
                     "Calle Las Higueras, 8 Local 4 - Edif. Alicia II\n38350 Tacoronte (Tenerife)",
-                    "922 563 501 / 717 793 246",
+                    "922 563 501",
                     "cofonta-oficina@cofonta.com",
                     "/mapa-oficina",
                 ),
