@@ -1,0 +1,45 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  export:
+    name: Export frontend (production build)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Initialize Reflex
+        run: reflex init
+
+      - name: Export frontend
+        run: reflex export --frontend-only --no-zip
+
+      - name: Upload frontend artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend
+          path: .web/_static/
+          retention-days: 7
