@@ -1,5 +1,8 @@
 # COFONTA® — Web en Python + Reflex
 
+[![CI](https://github.com/Fabianviera/NewWebcofonta_Python-Reflex/actions/workflows/ci.yml/badge.svg)](https://github.com/Fabianviera/NewWebcofonta_Python-Reflex/actions/workflows/ci.yml)
+[![Deploy](https://github.com/Fabianviera/NewWebcofonta_Python-Reflex/actions/workflows/deploy.yml/badge.svg)](https://github.com/Fabianviera/NewWebcofonta_Python-Reflex/actions/workflows/deploy.yml)
+
 Sitio web completo de **COFONTA, S.L.** desarrollado con [Reflex](https://reflex.dev), el framework Python full-stack que compila a React + FastAPI.
 
 ---
@@ -106,3 +109,14 @@ Para despliegue en servidor recomendamos usar **[Reflex Cloud](https://reflex.de
 ---
 
 Desarrollado por **Fabián Viera**
+
+---
+
+## Contribuir
+
+Consulta [CONTRIBUTING.md](CONTRIBUTING.md) para conocer cómo reportar bugs, proponer mejoras y enviar Pull Requests.
+
+## Changelog
+
+Consulta [CHANGELOG.md](CHANGELOG.md) para el historial de cambios del proyecto.
+
