@@ -1,5 +1,11 @@
 # COFONTA® — Web en Python + Reflex
 
+[![CI](https://github.com/Fabianviera/NewWebcofonta_Python-Reflex/actions/workflows/ci.yml/badge.svg)](https://github.com/Fabianviera/NewWebcofonta_Python-Reflex/actions/workflows/ci.yml)
+[![Deploy](https://github.com/Fabianviera/NewWebcofonta_Python-Reflex/actions/workflows/deploy.yml/badge.svg)](https://github.com/Fabianviera/NewWebcofonta_Python-Reflex/actions/workflows/deploy.yml)
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![Reflex](https://img.shields.io/badge/reflex-0.8.x-blueviolet)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 Sitio web completo de **COFONTA, S.L.** desarrollado con [Reflex](https://reflex.dev), el framework Python full-stack que compila a React + FastAPI.
 
 ---
@@ -92,6 +98,23 @@ reflex run --env prod
 ```
 
 Para despliegue en servidor recomendamos usar **[Reflex Cloud](https://reflex.dev/docs/hosting/deploy-quick-start/)** o un VPS con Nginx + systemd.
+
+---
+
+## CI / CD
+
+El repositorio incluye dos workflows de GitHub Actions:
+
+| Workflow | Disparador | Descripción |
+|----------|-----------|-------------|
+| `ci.yml` | `push` / `pull_request` en `main` y `develop` | Instala dependencias, ejecuta **ruff** (linter) y verifica que la app importa correctamente |
+| `deploy.yml` | `push` en `main` | Despliega automáticamente en **Reflex Cloud** usando el secreto `REFLEX_CLOUD_TOKEN` |
+
+### Configurar el despliegue automático
+
+1. Crea un token en [Reflex Cloud](https://reflex.dev/docs/hosting/deploy-quick-start/).
+2. Añade el secreto `REFLEX_CLOUD_TOKEN` en **Settings → Secrets and variables → Actions** del repositorio.
+3. Cada `push` a `main` desplegará la app automáticamente.
 
 ---
 
